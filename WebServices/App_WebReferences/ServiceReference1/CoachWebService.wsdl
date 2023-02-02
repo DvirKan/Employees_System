@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Gettcoaches">
+        <s:complexType />
+      </s:element>
+      <s:element name="GettcoachesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GettcoachesResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCoachService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PNUMBER" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ADDRESS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COACHSISMA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COACHEMAIL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertCoachServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpdateCoachService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PNUMBER" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ADDRESS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COACHSISMA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="COACHEMAIL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="COACHID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateCoachServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="LoginCoachService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="COACHID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="COACHSISMA" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginCoachServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginCoachServiceResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoachNameService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="COACHID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoachNameServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCoachNameServiceResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllEmployeesService">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeesServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeesServiceResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertEmployeeService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DateOfBirth" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="firstDay" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertEmployeeServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InsertDayAwayService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DayAway" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Kind" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDayAwayServiceResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GettcoachesSoapIn">
+    <wsdl:part name="parameters" element="tns:Gettcoaches" />
+  </wsdl:message>
+  <wsdl:message name="GettcoachesSoapOut">
+    <wsdl:part name="parameters" element="tns:GettcoachesResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertCoachServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertCoachService" />
+  </wsdl:message>
+  <wsdl:message name="InsertCoachServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertCoachServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCoachServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateCoachService" />
+  </wsdl:message>
+  <wsdl:message name="UpdateCoachServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateCoachServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginCoachServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginCoachService" />
+  </wsdl:message>
+  <wsdl:message name="LoginCoachServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginCoachServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCoachNameServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCoachNameService" />
+  </wsdl:message>
+  <wsdl:message name="GetCoachNameServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCoachNameServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeesServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeesService" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeesServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeesServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertEmployeeServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertEmployeeService" />
+  </wsdl:message>
+  <wsdl:message name="InsertEmployeeServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertEmployeeServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDayAwayServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertDayAwayService" />
+  </wsdl:message>
+  <wsdl:message name="InsertDayAwayServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDayAwayServiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="siSoap">
+    <wsdl:operation name="Gettcoaches">
+      <wsdl:input message="tns:GettcoachesSoapIn" />
+      <wsdl:output message="tns:GettcoachesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertCoachService">
+      <wsdl:input message="tns:InsertCoachServiceSoapIn" />
+      <wsdl:output message="tns:InsertCoachServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCoachService">
+      <wsdl:input message="tns:UpdateCoachServiceSoapIn" />
+      <wsdl:output message="tns:UpdateCoachServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginCoachService">
+      <wsdl:input message="tns:LoginCoachServiceSoapIn" />
+      <wsdl:output message="tns:LoginCoachServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoachNameService">
+      <wsdl:input message="tns:GetCoachNameServiceSoapIn" />
+      <wsdl:output message="tns:GetCoachNameServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeesService">
+      <wsdl:input message="tns:GetAllEmployeesServiceSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeesServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertEmployeeService">
+      <wsdl:input message="tns:InsertEmployeeServiceSoapIn" />
+      <wsdl:output message="tns:InsertEmployeeServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDayAwayService">
+      <wsdl:input message="tns:InsertDayAwayServiceSoapIn" />
+      <wsdl:output message="tns:InsertDayAwayServiceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="siSoap" type="tns:siSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Gettcoaches">
+      <soap:operation soapAction="http://tempuri.org/Gettcoaches" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCoachService">
+      <soap:operation soapAction="http://tempuri.org/InsertCoachService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCoachService">
+      <soap:operation soapAction="http://tempuri.org/UpdateCoachService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginCoachService">
+      <soap:operation soapAction="http://tempuri.org/LoginCoachService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoachNameService">
+      <soap:operation soapAction="http://tempuri.org/GetCoachNameService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeesService">
+      <soap:operation soapAction="http://tempuri.org/GetAllEmployeesService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEmployeeService">
+      <soap:operation soapAction="http://tempuri.org/InsertEmployeeService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDayAwayService">
+      <soap:operation soapAction="http://tempuri.org/InsertDayAwayService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="siSoap12" type="tns:siSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Gettcoaches">
+      <soap12:operation soapAction="http://tempuri.org/Gettcoaches" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertCoachService">
+      <soap12:operation soapAction="http://tempuri.org/InsertCoachService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCoachService">
+      <soap12:operation soapAction="http://tempuri.org/UpdateCoachService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginCoachService">
+      <soap12:operation soapAction="http://tempuri.org/LoginCoachService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoachNameService">
+      <soap12:operation soapAction="http://tempuri.org/GetCoachNameService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEmployeesService">
+      <soap12:operation soapAction="http://tempuri.org/GetAllEmployeesService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEmployeeService">
+      <soap12:operation soapAction="http://tempuri.org/InsertEmployeeService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDayAwayService">
+      <soap12:operation soapAction="http://tempuri.org/InsertDayAwayService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="si">
+    <wsdl:port name="siSoap" binding="tns:siSoap">
+      <soap:address location="http://localhost:7763/%D7%A4%D7%A8%D7%95%D7%99%D7%99%D7%A7%D7%98%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A6%D7%93%20%D7%A9%D7%A8%D7%AA/CoachWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="siSoap12" binding="tns:siSoap12">
+      <soap12:address location="http://localhost:7763/%D7%A4%D7%A8%D7%95%D7%99%D7%99%D7%A7%D7%98%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A6%D7%93%20%D7%A9%D7%A8%D7%AA/CoachWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

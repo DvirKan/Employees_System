@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetAllEmployeesService">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAllEmployeesServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllEmployeesServiceResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeDataService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEmployeeDataServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEmployeeDataServiceResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertEmployeeService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateOfBirth" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="firstDay" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Img" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertEmployeeServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteEmployeeService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteEmployeeServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="updateEmployeeNecessaryService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FullName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PhoneNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="updateEmployeeNecessaryServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDaysAway">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDaysAwayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDaysAwayResult">
+              <s:complexType>
+                <s:annotation>
+                  <s:appinfo>
+                    <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+                  </s:appinfo>
+                </s:annotation>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDayAwayService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DayAway" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="Kind" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertDayAwayServiceResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVacationDaysCountService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetVacationDaysCountServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetVacationDaysCountServiceResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVacationDayService">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="DateAway" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteVacationDayServiceResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetAllEmployeesServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeesService" />
+  </wsdl:message>
+  <wsdl:message name="GetAllEmployeesServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllEmployeesServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeDataServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDataService" />
+  </wsdl:message>
+  <wsdl:message name="GetEmployeeDataServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEmployeeDataServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertEmployeeServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertEmployeeService" />
+  </wsdl:message>
+  <wsdl:message name="InsertEmployeeServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertEmployeeServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmployeeServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeeService" />
+  </wsdl:message>
+  <wsdl:message name="DeleteEmployeeServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteEmployeeServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="updateEmployeeNecessaryServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:updateEmployeeNecessaryService" />
+  </wsdl:message>
+  <wsdl:message name="updateEmployeeNecessaryServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:updateEmployeeNecessaryServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDaysAwaySoapIn">
+    <wsdl:part name="parameters" element="tns:GetDaysAway" />
+  </wsdl:message>
+  <wsdl:message name="GetDaysAwaySoapOut">
+    <wsdl:part name="parameters" element="tns:GetDaysAwayResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertDayAwayServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertDayAwayService" />
+  </wsdl:message>
+  <wsdl:message name="InsertDayAwayServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertDayAwayServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetVacationDaysCountServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVacationDaysCountService" />
+  </wsdl:message>
+  <wsdl:message name="GetVacationDaysCountServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVacationDaysCountServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVacationDayServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteVacationDayService" />
+  </wsdl:message>
+  <wsdl:message name="DeleteVacationDayServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteVacationDayServiceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSSoap">
+    <wsdl:operation name="GetAllEmployeesService">
+      <wsdl:input message="tns:GetAllEmployeesServiceSoapIn" />
+      <wsdl:output message="tns:GetAllEmployeesServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDataService">
+      <wsdl:input message="tns:GetEmployeeDataServiceSoapIn" />
+      <wsdl:output message="tns:GetEmployeeDataServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertEmployeeService">
+      <wsdl:input message="tns:InsertEmployeeServiceSoapIn" />
+      <wsdl:output message="tns:InsertEmployeeServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployeeService">
+      <wsdl:input message="tns:DeleteEmployeeServiceSoapIn" />
+      <wsdl:output message="tns:DeleteEmployeeServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="updateEmployeeNecessaryService">
+      <wsdl:input message="tns:updateEmployeeNecessaryServiceSoapIn" />
+      <wsdl:output message="tns:updateEmployeeNecessaryServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDaysAway">
+      <wsdl:input message="tns:GetDaysAwaySoapIn" />
+      <wsdl:output message="tns:GetDaysAwaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertDayAwayService">
+      <wsdl:input message="tns:InsertDayAwayServiceSoapIn" />
+      <wsdl:output message="tns:InsertDayAwayServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVacationDaysCountService">
+      <wsdl:input message="tns:GetVacationDaysCountServiceSoapIn" />
+      <wsdl:output message="tns:GetVacationDaysCountServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVacationDayService">
+      <wsdl:input message="tns:DeleteVacationDayServiceSoapIn" />
+      <wsdl:output message="tns:DeleteVacationDayServiceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSSoap" type="tns:WSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllEmployeesService">
+      <soap:operation soapAction="http://tempuri.org/GetAllEmployeesService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDataService">
+      <soap:operation soapAction="http://tempuri.org/GetEmployeeDataService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEmployeeService">
+      <soap:operation soapAction="http://tempuri.org/InsertEmployeeService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployeeService">
+      <soap:operation soapAction="http://tempuri.org/DeleteEmployeeService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmployeeNecessaryService">
+      <soap:operation soapAction="http://tempuri.org/updateEmployeeNecessaryService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDaysAway">
+      <soap:operation soapAction="http://tempuri.org/GetDaysAway" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDayAwayService">
+      <soap:operation soapAction="http://tempuri.org/InsertDayAwayService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVacationDaysCountService">
+      <soap:operation soapAction="http://tempuri.org/GetVacationDaysCountService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVacationDayService">
+      <soap:operation soapAction="http://tempuri.org/DeleteVacationDayService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSSoap12" type="tns:WSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllEmployeesService">
+      <soap12:operation soapAction="http://tempuri.org/GetAllEmployeesService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployeeDataService">
+      <soap12:operation soapAction="http://tempuri.org/GetEmployeeDataService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertEmployeeService">
+      <soap12:operation soapAction="http://tempuri.org/InsertEmployeeService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEmployeeService">
+      <soap12:operation soapAction="http://tempuri.org/DeleteEmployeeService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateEmployeeNecessaryService">
+      <soap12:operation soapAction="http://tempuri.org/updateEmployeeNecessaryService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDaysAway">
+      <soap12:operation soapAction="http://tempuri.org/GetDaysAway" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertDayAwayService">
+      <soap12:operation soapAction="http://tempuri.org/InsertDayAwayService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVacationDaysCountService">
+      <soap12:operation soapAction="http://tempuri.org/GetVacationDaysCountService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteVacationDayService">
+      <soap12:operation soapAction="http://tempuri.org/DeleteVacationDayService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WS">
+    <wsdl:port name="WSSoap" binding="tns:WSSoap">
+      <soap:address location="http://localhost:1242/WebServices/WebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSSoap12" binding="tns:WSSoap12">
+      <soap12:address location="http://localhost:1242/WebServices/WebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

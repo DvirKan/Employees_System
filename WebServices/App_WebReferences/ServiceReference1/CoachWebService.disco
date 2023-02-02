@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://localhost:7763/פרוייקט סיום צד שרת/CoachWebService.asmx?wsdl" docRef="http://localhost:7763/פרוייקט סיום צד שרת/CoachWebService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://localhost:7763/%D7%A4%D7%A8%D7%95%D7%99%D7%99%D7%A7%D7%98%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A6%D7%93%20%D7%A9%D7%A8%D7%AA/CoachWebService.asmx" xmlns:q1="http://tempuri.org/" binding="q1:siSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://localhost:7763/%D7%A4%D7%A8%D7%95%D7%99%D7%99%D7%A7%D7%98%20%D7%A1%D7%99%D7%95%D7%9D%20%D7%A6%D7%93%20%D7%A9%D7%A8%D7%AA/CoachWebService.asmx" xmlns:q2="http://tempuri.org/" binding="q2:siSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
